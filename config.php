@@ -26,9 +26,25 @@
 $THEME->name = 'material';
 $THEME->doctype = 'html5';
 $THEME->yuicssmodules = array();
-$THEME->parents = array();
+$THEME->parents = array('base');
+$THEME->sheets = array(
+    'moodle-material'
+);
 $THEME->layouts = array(
     'base' => array(
-        'file' => 'base.php'
+        'file' => 'base.php',
+        'regions' => array('side-pre', 'side-post')
+    ),
+    'admin' => array(
+        'file' => 'base.php',
+        'regions' => array('side-pre', 'side-post')
+    ),
+    'mydashboard' => array(
+        'file' => 'base.php',
+        'regions' => array('side-pre', 'side-post')
     )
 );
+$THEME->javascripts_footer = array(
+    'material'
+);
+$THEME->rendererfactory = 'theme_overridden_renderer_factory';

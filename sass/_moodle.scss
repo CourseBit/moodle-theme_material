@@ -1,0 +1,20 @@
+/**
+ * Accessibility features
+ */
+/*Accessibility: text 'seen' by screen readers but not visual users. */
+.accesshide {position:absolute;left:-10000px;font-weight:normal;font-size:1em;}
+.dir-rtl .accesshide {top:-30000px;left:auto;}
+span.hide,
+div.hide {display:none;}
+.invisiblefieldset {display:inline;border-width:0;padding:0;margin:0;}
+/*Accessibility: Skip block link, for keyboard-only users. */
+a.skip-block,
+a.skip {position: absolute;top: -1000em;font-size: 0.85em;text-decoration:none;}
+a.skip-block:focus,
+a.skip-block:active,
+a.skip:focus,
+a.skip:active {position: static;display: block;}
+.skip-block-to {display: block;height: 1px;overflow: hidden;}
+/* Accessibility: only certain fonts support Unicode chars like &#x25BA; in IE6 */
+.arrow,
+.arrow_button input {font-family: Arial,Helvetica,Courier,sans-serif;}
